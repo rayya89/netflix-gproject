@@ -8,16 +8,13 @@ import Login from "../pages/Login";
 import NotLogged from "../pages/NotLogged";
 import RecoverPassword from "../pages/RecoverPassword";
 
-export default function UnloggedRoutes({ emailState }) {
+export default function UnloggedRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="signup" element={<StartSignup emailState={emailState} />} />
+      <Route path="signup" element={<StartSignup />} />
       <Route path="LoginHelp" element={<RecoverPassword />} />
-      <Route
-        path="signup/regform"
-        element={<Signup emailState={emailState} />}
-      />
+      <Route path="signup/regform" element={<Signup />} />
       <Route path="*" element={<NotLogged />} />
     </Routes>
   );

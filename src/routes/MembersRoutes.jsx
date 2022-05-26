@@ -8,17 +8,14 @@ import Login from "../pages/Login";
 import Dashboard from "../pages/Dashboard";
 import RecoverPassword from "../pages/RecoverPassword";
 
-export default function MembersRoutes({ emailState }) {
+export default function MembersRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="dashboard" element={<Dashboard />} />
-      <Route path="signup" element={<StartSignup emailState={emailState} />} />
+      <Route path="signup" element={<StartSignup />} />
       <Route path="LoginHelp" element={<RecoverPassword />} />
-      <Route
-        path="signup/regform"
-        element={<Signup emailState={emailState} />}
-      />
+      <Route path="signup/regform" element={<Signup />} />
     </Routes>
   );
 }

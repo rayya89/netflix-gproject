@@ -7,9 +7,10 @@ const Context = createContext(null);
 export function UserProvider({ children }) {
   // Local state
   const [user, setUser] = useState(null);
+  const [email, setEmail] = useState("");
 
   //Properties
-  const value = { user, setUser };
+  const value = { user, setUser, email, setEmail };
 
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }

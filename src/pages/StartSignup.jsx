@@ -1,15 +1,14 @@
-// import { useState } from "react";
-// import { Link } from "react-router-dom";
+//NPM packages
 import { useNavigate, Link } from "react-router-dom";
 
+//Project files
 import Logo from "../assets/Logo.png";
 import InputField from "../components/InputField";
 import form from "../data/signUpForm.json";
+import { useUser } from "../state/UserContext";
 
-export default function StartSignup({ emailState }) {
-  //Local state
-  // const [email, setEmail] = useState("");
-  const [email, setEmail] = emailState;
+export default function StartSignup() {
+  const { email, setEmail } = useUser();
   const navigate = useNavigate();
 
   //Methods
@@ -29,11 +28,7 @@ export default function StartSignup({ emailState }) {
       <h2>Watch anywhere. Cancel at any time.</h2>
       <form className="form" onSubmit={onSubmit}>
         <InputField setup={form.email} state={[email, setEmail]} />
-        <button>
-          {/* <Link to="signup/regform" state={{ emailState: [email, setEmail] }}> */}
-          Get Started
-          {/* </Link> */}
-        </button>
+        <button>Get Started</button>
       </form>
     </div>
   );

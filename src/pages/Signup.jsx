@@ -11,9 +11,8 @@ import { createDocumentWithId, getDocument } from "../scripts/fireStore";
 import { useUser } from "../state/UserContext";
 import { onFail } from "../scripts/onFail";
 
-export default function Signup({ emailState }) {
-  const [email, setEmail] = emailState;
-  const { setUser } = useUser();
+export default function Signup() {
+  const { setUser, email, setEmail } = useUser();
   const navigate = useNavigate();
 
   //Local state
