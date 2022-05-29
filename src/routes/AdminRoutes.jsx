@@ -13,7 +13,7 @@ export default function AdminRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="dashboard" element={<Dashboard />} />
+      <Route path="browse" element={<Dashboard />} />
       <Route path="signup" element={<StartSignup />} />
       <Route path="admin" element={<Admin />} />
       <Route path="LoginHelp" element={<RecoverPassword />} />

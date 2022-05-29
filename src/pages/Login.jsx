@@ -7,7 +7,7 @@ import Logo from "../assets/Logo.png";
 import InputField from "../components/InputField";
 import form from "../data/loginForm.json";
 import { loginUser } from "../scripts/firebaseAuth";
-import { getDocument } from "../scripts/fireStore";
+import { readDocument } from "../scripts/fireStore";
 import { useUser } from "../state/UserContext";
 import { onFail } from "../scripts/onFail";
 
@@ -23,14 +23,14 @@ export default function Login() {
     event.preventDefault();
     let user;
     const uid = await loginUser(email, password).catch(onFail);
-    if (uid) user = await getDocument("users", uid).catch(onFail);
+    if (uid) user = await readDocument("users", uid).catch(onFail);
 
     if (user) onSuccess(user);
   }
 
   function onSuccess(user) {
     setUser(user);
-    user.role === "member" && navigate("/dashboard");
+    user.role === "member" && navigate("/browse");
     user.role === "admin" && navigate("/admin");
   }
 

@@ -12,7 +12,7 @@ export default function MembersRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="dashboard" element={<Dashboard />} />
+      <Route path="browse" element={<Dashboard />} />
       <Route path="signup" element={<StartSignup />} />
       <Route path="LoginHelp" element={<RecoverPassword />} />
       <Route path="signup/regform" element={<Signup />} />

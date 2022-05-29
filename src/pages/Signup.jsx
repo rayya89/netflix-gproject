@@ -7,7 +7,7 @@ import Logo from "../assets/Logo.png";
 import InputField from "../components/InputField";
 import form from "../data/signUpForm";
 import { createUser } from "../scripts/firebaseAuth";
-import { createDocumentWithId, getDocument } from "../scripts/fireStore";
+import { createDocumentWithId, readDocument } from "../scripts/fireStore";
 import { useUser } from "../state/UserContext";
 import { onFail } from "../scripts/onFail";
 
@@ -39,13 +39,13 @@ export default function Signup() {
   }
 
   async function getUserData(UID) {
-    const userData = await getDocument("users", UID);
+    const userData = await readDocument("users", UID);
     return userData;
   }
 
   async function onSuccess(userData) {
     setUser(userData);
-    navigate("/dashboard");
+    navigate("/browse");
   }
 
   return (
