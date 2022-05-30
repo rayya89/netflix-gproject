@@ -8,16 +8,16 @@ import TitleCategory from "../components/TitleCategory";
 
 export default function Dashboard() {
   // Local state
-  const [documentaries, setDocumentaries] = useState([]);
   const [movies, setMovies] = useState([]);
-  const [topTen, setTopTen] = useState([]);
   const [series, setSeries] = useState([]);
+  const [documentaries, setDocumentaries] = useState([]);
+  const [topTen, setTopTen] = useState([]);
   const [status, setStatus] = useState(0); // 0: loading, 1: loaded, 2: error
 
   //Properties
-  const docPath = "titles/categories/documentaries";
   const moviesPath = "titles/categories/movies";
   const seriesPath = "titles/categories/series";
+  const docPath = "titles/categories/documentaries";
   const topTenPath = "titles/categories/top-ten";
 
   // Method

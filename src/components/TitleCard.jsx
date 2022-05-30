@@ -2,7 +2,7 @@ export default function TitleCard({ item }) {
   const { thumbnailURL } = item;
 
   return (
-    <div>
+    <div onClick>
       <img src={thumbnailURL} alt="movie-poster" />
     </div>
   );
