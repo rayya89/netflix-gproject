@@ -35,11 +35,11 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <div className="login">
       <header>
         <img className="logo" src={Logo} alt="Netflix" />
       </header>
-      <div>
+      <div class="hero-form">
         <h1>Sign In</h1>
         <form className="form" onSubmit={onLogin}>
           <InputField setup={form.email} state={[email, setEmail]} />

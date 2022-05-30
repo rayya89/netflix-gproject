@@ -1,0 +1,38 @@
+.login {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/src/assets/login-background.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  padding: var(--space-ultra);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.login header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 90px;
+}
+
+.login .logo {
+  padding-left: var(--space-ultra);
+  padding-top: var(--space-ultra);
+}
