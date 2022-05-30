@@ -2,6 +2,7 @@
 import { useModal } from "../state/ModalContext";
 import UpdateTitleForm from "./UpdateTitleForm";
 import DeleteTitleForm from "./DeleteTitleForm";
+import TitleModal from "./TitleModal";
 
 export default function AdminTitleCard({ item }) {
   const { name, thumbnailURL } = item;
@@ -16,7 +17,11 @@ export default function AdminTitleCard({ item }) {
         <button onClick={() => setModal(<DeleteTitleForm item={item} />)}>
           Delete
         </button>
-        <img src={thumbnailURL} alt="movie-poster" />
+        <img
+          onClick={() => setModal(<TitleModal item={item} />)}
+          src={thumbnailURL}
+          alt="movie-poster"
+        />
       </div>
       <h3>{name}</h3>
     </article>

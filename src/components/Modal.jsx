@@ -11,7 +11,9 @@ export default function Modal() {
 
   return createPortal(
     <div className="modal">
-      <div className="background">{/* empty on purpose */}</div>
+      <div className="background" onClick={() => setModal(null)}>
+        {/* empty on purpose */}
+      </div>
       <div className="content">{modal}</div>
     </div>,
     document.getElementById("portal")

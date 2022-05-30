@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { readCollection } from "../scripts/fireStore";
 import { onFail } from "../scripts/onFail";
 import TitleCategory from "../components/TitleCategory";
+import DashboardHero from "../components/DashboardHero";
 
 export default function Dashboard() {
   // Local state
@@ -48,7 +49,7 @@ export default function Dashboard() {
 
   return (
     <div>
-      <div></div>
+      <DashboardHero />
       <TitleCategory category="Movies" list={movies} />
       <TitleCategory category="Series" list={series} />
       <TitleCategory category="Documentaries" list={documentaries} />
