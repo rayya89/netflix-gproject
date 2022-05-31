@@ -8,6 +8,7 @@ p {
 h1 {
   font-size: 28px;
   line-height: 1.5;
+  color: var(--swatch-white);
 }
 
 h2 {
@@ -25,13 +26,15 @@ li {
   line-height: 1.6;
 }
 
-Link {
+.link-text {
   text-decoration: none;
+  font-size: 17px;
+  color: var(--swatch-white);
 }
 
 @media (min-width: 750px) {
   h1 {
-    font-size: 46px;
+    font-size: 32px;
     line-height: 1.5;
   }
 

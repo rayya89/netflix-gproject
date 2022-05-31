@@ -2,7 +2,7 @@
 :root {
   --color-primary: var(--swatch-red);
   --color-secondary: var(--swatch-black);
-  --color-text: var(--swatch-white);
+  --color-text: var(--swatch-dark-grey);
 }
 
 /* Space */

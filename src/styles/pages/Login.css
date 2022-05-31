@@ -1,38 +1,87 @@
-.login {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/src/assets/login-background.jpg");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
 .hero-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 25%;
-  padding: var(--space-ultra);
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: black;
+  height: 100vh;
+  padding-top: var(--space-small);
+  padding-left: var(--space-big);
+  padding-right: var(--space-big);
 }
 
 .login header {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.5) 0,
-    rgba(0, 0, 0, 0) 100%
-  );
-  height: 90px;
+  background-color: black;
 }
 
 .login .logo {
-  padding-left: var(--space-ultra);
-  padding-top: var(--space-ultra);
+  padding-left: var(--space-small);
+  padding-top: var(--space-small);
+  width: 75px;
+  height: auto;
+  margin-top: var(--space-small);
+  padding-left: var(--space-big);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form button {
+  margin-top: var(--space-big);
+  margin-bottom: var(--space-small);
+}
+
+.login h1 {
+  margin-bottom: var(--space-medium);
+}
+
+.signup-link {
+  margin-top: var(--space-ultra);
+  display: flex;
+  align-items: center;
+  gap: var(--space-small);
+}
+
+@media (min-width: 750px) {
+  .login-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/src/assets/login-background.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .login header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0,
+      rgba(0, 0, 0, 0) 100%
+    );
+    height: 90px;
+    margin-bottom: var(--space-medium);
+  }
+
+  .hero-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: var(--space-ultra);
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 480px;
+    width: 380px;
+    margin-top: var(--space-ultra);
+  }
+
+  .login .logo {
+    padding-left: var(--space-ultra);
+    padding-top: var(--space-ultra);
+    height: 45px;
+    width: 167px;
+  }
 }

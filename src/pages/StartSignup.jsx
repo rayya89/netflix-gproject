@@ -19,16 +19,18 @@ export default function StartSignup() {
   }
 
   return (
-    <div>
+    <div className="start-signup">
       <header>
         <img className="logo" src={Logo} alt="Netflix" />
-        <Link to="/">Sign In</Link>
+        <Link className="button" to="/">
+          Sign In
+        </Link>
       </header>
       <h1>Unlimited films, TV programmes and more.</h1>
       <h2>Watch anywhere. Cancel at any time.</h2>
       <form className="form" onSubmit={onSubmit}>
         <InputField setup={form.email} state={[email, setEmail]} />
-        <button>Get Started</button>
+        <button className="button">Get Started</button>
       </form>
     </div>
   );

@@ -13,8 +13,13 @@ input {
   max-width: 475px;
   height: 44px;
   padding: var(--space-small) var(--space-medium);
-  border-radius: var(--space-small);
-  border: solid 2px;
-  border-color: var(--swatch-black);
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
   background-color: var(--swatch-grey);
+}
+
+input:active {
+  border: none;
+  outline: none;
 }
